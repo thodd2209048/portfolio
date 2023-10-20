@@ -1,13 +1,15 @@
 import { useEffect } from "react";
-import Cover from "./components/Cover/Cover";
-import Header from "./components/Header/Header";
+import Cover from "./pages/HomePage/Cover/Cover";
+import Header from "./layouts/Header/Header";
 
 import Aos from "aos";
 import { Container } from "react-bootstrap";
 import clsx from "clsx";
-import WaveBg from "./components/WaveBg/WaveBg";
+import WaveBg from "./pages/HomePage/WaveBg/WaveBg";
 import Section from "./components/Section/Section";
-import About from "./components/About/About";
+import About from "./pages/HomePage/About/About";
+import DefaultLayout from "./layouts/DefaultLayout/DefaultLayout";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   useEffect(() => {
@@ -21,14 +23,10 @@ function App() {
     });
   }, []);
   return (
-    <div className="App bg-white">
-      <Header />
-      <Cover />
-      <WaveBg />
-      <Section>
-        <About />
-      </Section>
-      <div style={{ height: "3000px" }}></div>
+    <div>
+      <DefaultLayout>
+        <HomePage />
+      </DefaultLayout>
     </div>
   );
 }

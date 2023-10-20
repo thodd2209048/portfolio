@@ -2,8 +2,12 @@ import { useEffect } from "react";
 import Cover from "./components/Cover/Cover";
 import Header from "./components/Header/Header";
 
-import "aos/dist/aos.css";
 import Aos from "aos";
+import { Container } from "react-bootstrap";
+import clsx from "clsx";
+import WaveBg from "./components/WaveBg/WaveBg";
+import Section from "./components/Section/Section";
+import About from "./components/About/About";
 
 function App() {
   useEffect(() => {
@@ -17,9 +21,14 @@ function App() {
     });
   }, []);
   return (
-    <div className="App bg-light">
+    <div className="App bg-white">
       <Header />
       <Cover />
+      <WaveBg />
+      <Section>
+        <About />
+      </Section>
+      <div style={{ height: "3000px" }}></div>
     </div>
   );
 }

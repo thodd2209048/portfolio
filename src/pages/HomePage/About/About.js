@@ -1,13 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Col, Container, Image, Row } from "react-bootstrap";
-import avatar from "../../assets/avatar.jpg";
-import clsx from "clsx";
-import styles from "./About.module.scss";
+import { Col, Image, Row } from "react-bootstrap";
+import avatar from "~/assets/avatar.jpg";
 
 About.propTypes = {};
 
 function About(props) {
+  let currentYear = new Date().getFullYear();
+  let age = currentYear - 1990;
   return (
     <>
       <div className="container-lg container-fluid">
@@ -28,7 +26,7 @@ function About(props) {
                 <div className="pb-1">Age:</div>
               </Col>
               <Col sm={10}>
-                <div className="pb-1 fw-bold">28</div>
+                <div className="pb-1 fw-bold">{age}</div>
               </Col>
               <Col sm={2}>
                 <div className="pb-1">Email:</div>
@@ -59,8 +57,7 @@ function About(props) {
           <Col md={5} className="d-flex px-5 justify-content-end offset-md-1">
             <div>
               <Image
-                className="avatar img-fluid mt-3"
-                rounded
+                className="avatar img-fluid mt-5 rounded-5"
                 src={avatar}
                 alt="example"
               />

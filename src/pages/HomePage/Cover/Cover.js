@@ -1,14 +1,9 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { Button, Col, Container, Image, Row } from "react-bootstrap";
-import Aos from "aos";
 import "aos/dist/aos.css";
-import SocialNav from "../SocialNav/SocialNav";
-import { SymbolArrowRight, symbolArrowRight } from "~/utils/symbols";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
+import { SymbolArrowRight } from "~/utils/symbols";
+import SocialNav from "../../../components/SocialNav/SocialNav";
 
-import programmer from "../../assets/programmer.svg";
-import styles from "./Cover.module.scss";
-import clsx from "clsx";
+import programmer from "~/assets/programmer.svg";
 
 Cover.propTypes = {};
 

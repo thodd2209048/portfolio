@@ -1,0 +1,13 @@
+$primary: #f6e05e;
+
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+
+$custom-theme-colors: (
+  "altlight": #f4f6f8,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+// Import Bootstrap's Sass source files for customization
+@import "../../node_modules/bootstrap/scss/bootstrap";

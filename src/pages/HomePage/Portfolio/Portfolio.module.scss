@@ -1,0 +1,52 @@
+.portfolioGrid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.portfolioGridColumn {
+  padding-left: 15px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.portfolioGridColumn > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 15px;
+}
+
+.gridItem {
+  & a {
+    text-decoration: none;
+  }
+
+  & img {
+    width: 100%;
+  }
+
+  & figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    transition: transform 0.3s;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  & p {
+    color: #444;
+  }
+
+  &:hover figcaption {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.portfolioItem {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+}

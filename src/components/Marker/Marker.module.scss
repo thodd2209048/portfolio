@@ -1,0 +1,16 @@
+.marker {
+  position: relative;
+  display: inline;
+  width: auto;
+}
+
+.marker::after {
+  content: "";
+  width: 125px;
+  height: 30px;
+  position: absolute;
+  bottom: -35px;
+  // right: 100%;
+  background-image: url("../../assets/images/marker.svg");
+  background-repeat: no-repeat;
+}

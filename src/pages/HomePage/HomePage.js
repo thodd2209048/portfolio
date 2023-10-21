@@ -1,11 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Cover from "~/pages/HomePage/Cover/Cover";
-import WaveBg from "~/pages/HomePage/WaveBg/WaveBg";
 import Section from "~/components/Section/Section";
 import About from "~/pages/HomePage/About/About";
-import MyServices from "./MyServices/MyServices";
+import Cover from "~/pages/HomePage/Cover/Cover";
+import WaveBg from "~/pages/HomePage/WaveBg/WaveBg";
 import MyCertificates from "./MyCertificates/MyCertificates";
+import MyServices from "./MyServices/MyServices";
+import Portfolio from "./Portfolio/Portfolio";
 
 HomePage.propTypes = {};
 
@@ -29,6 +28,9 @@ function HomePage({ refList }) {
         description="I am a quick learner and specialize in multitude of skills required for Web Application Development and Product Design"
       >
         <MyCertificates />
+      </Section>
+      <Section title="Portfolios">
+        <Portfolio />
       </Section>
     </div>
   );

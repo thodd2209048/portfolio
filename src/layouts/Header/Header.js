@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
-import { Col, Row, Container, Navbar, Nav } from "react-bootstrap";
+import { Col, Row, Container, Navbar, Nav, Button } from "react-bootstrap";
 import clsx from "clsx";
 
 import styles from "./Header.module.scss";
 
 Header.propTypes = {};
 
-function Header(props) {
+function Header({ scrollToTarget, refList }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const navbarRef = useRef(null);
+  const { aboutRef, servicesRef, certificatesRef } = refList;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,11 +47,24 @@ function Header(props) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link>About</Nav.Link>
-              <Nav.Link>Services</Nav.Link>
-              <Nav.Link>Skills</Nav.Link>
-              <Nav.Link>Portfolio</Nav.Link>
-              <Nav.Link>Contact</Nav.Link>
+              <Button
+                className="btn-primary me-2 fw-bold"
+                onClick={() => scrollToTarget(aboutRef)}
+              >
+                About
+              </Button>
+              <Button
+                className="btn-primary me-2 fw-bold"
+                onClick={() => scrollToTarget(servicesRef)}
+              >
+                Services
+              </Button>
+              <Button
+                className="btn-primary me-2 fw-bold"
+                onClick={() => scrollToTarget(certificatesRef)}
+              >
+                Certificates
+              </Button>
             </Nav>
           </Navbar.Collapse>
         </div>

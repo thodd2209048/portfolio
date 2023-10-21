@@ -3,7 +3,7 @@ import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import { SymbolArrowRight } from "~/utils/symbols";
 import SocialNav from "../../../components/SocialNav/SocialNav";
 
-import programmer from "~/assets/programmer.svg";
+import programmer from "~/assets/images/programmer.svg";
 
 Cover.propTypes = {};
 
@@ -31,11 +31,11 @@ function Cover(props) {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                Web Developer & Mobile Application Developer
+                Full Stack Developer
               </p>
-
-              <SocialNav />
-
+              <div data-aos="fade-up" data-aos-delay="200">
+                <SocialNav />
+              </div>
               <Button
                 className="btn btn-primary rounded-pill mt-4 px-3 fw-semibold"
                 data-aos="fade-up"

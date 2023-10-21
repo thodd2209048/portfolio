@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import clsx from "clsx";
 
 import styles from "./WaveBg.module.scss";
-import waveSvg from "~/assets/wave.svg";
+import waveSvg from "~/assets/images/wave.svg";
 
 WaveBg.propTypes = {};
 

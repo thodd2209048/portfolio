@@ -13,7 +13,7 @@ function Section({ children, title, description }) {
     <div className="px-4 px-lg-5 pt-5 mt-3 justify-content-center text-center container-lg container-fluid">
       {!!title && (
         <Marker>
-          <h2 className="mb-3">{title}</h2>
+          <h2 className="mb-5">{title}</h2>
         </Marker>
       )}
       {!!description && <p className="mb-2 mx-auto">{description}</p>}

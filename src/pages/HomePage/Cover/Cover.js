@@ -4,6 +4,7 @@ import { SymbolArrowRight } from "~/utils/symbols";
 import SocialNav from "../../../components/SocialNav/SocialNav";
 
 import programmer from "~/assets/images/programmer.svg";
+import Marker from "~/components/Marker/Marker";
 
 Cover.propTypes = {};
 

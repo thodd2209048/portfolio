@@ -1,25 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Container } from "react-bootstrap";
 import clsx from "clsx";
+import { Container } from "react-bootstrap";
 
-import styles from "./WaveBg.module.scss";
 import waveSvg from "~/assets/images/wave.svg";
+import styles from "./WaveBg.module.scss";
 
 WaveBg.propTypes = {};
 
 function WaveBg(props) {
   return (
-    <div>
-      <Container fluid>
+    <>
+      <div className="container-fluid bg-white p-0">
         <div
           className={clsx(styles.waveBg)}
           style={{
             backgroundImage: `url(${waveSvg})`,
           }}
         ></div>
-      </Container>
-    </div>
+      </div>
+    </>
   );
 }
 

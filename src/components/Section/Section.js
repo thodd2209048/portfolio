@@ -8,9 +8,12 @@ Section.propTypes = {
   description: PropTypes.string,
 };
 
-function Section({ children, title, description }) {
+function Section({ children, title, description, sectionRef }) {
   return (
-    <div className="px-4 px-lg-5 pt-5 mt-3 justify-content-center text-center container-lg container-fluid">
+    <div
+      className="px-4 px-lg-5 pt-5 mt-3 justify-content-center text-center container-lg container-fluid"
+      ref={sectionRef}
+    >
       {!!title && (
         <Marker>
           <h2 className="mb-5">{title}</h2>

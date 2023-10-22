@@ -7,7 +7,7 @@ function About({ aboutRef }) {
   let currentYear = new Date().getFullYear();
   let age = currentYear - 1990;
   return (
-    <div ref={aboutRef}>
+    <div>
       {/* <div className="container-lg container-fluid"> */}
       <Row>
         <Col md={6} className="text-start">

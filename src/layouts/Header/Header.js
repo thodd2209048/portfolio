@@ -1,16 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
-import { Col, Row, Container, Navbar, Nav, Button } from "react-bootstrap";
 import clsx from "clsx";
+import PropTypes from "prop-types";
+import { useEffect, useRef, useState } from "react";
+import { Button, Nav, Navbar } from "react-bootstrap";
 
 import styles from "./Header.module.scss";
 
-Header.propTypes = {};
+Header.propTypes = {
+  scrollToTarget: PropTypes.func,
+  refList: PropTypes.object,
+};
 
 function Header({ scrollToTarget, refList }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const navbarRef = useRef(null);
-  const { aboutRef, servicesRef, certificatesRef } = refList;
+  const { aboutRef, skillRef, servicesRef, certificatesRef } = refList;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,9 +58,11 @@ function Header({ scrollToTarget, refList }) {
               </Button>
               <Button
                 className="btn-primary me-2 fw-bold"
-                onClick={() => scrollToTarget(servicesRef)}
+                onClick={() => {
+                  scrollToTarget(skillRef);
+                }}
               >
-                Services
+                Skills
               </Button>
               <Button
                 className="btn-primary me-2 fw-bold"

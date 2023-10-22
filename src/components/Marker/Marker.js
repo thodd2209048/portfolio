@@ -4,7 +4,9 @@ import clsx from "clsx";
 
 import styles from "./Marker.module.scss";
 
-Marker.propTypes = {};
+Marker.propTypes = {
+  children: PropTypes.node,
+};
 
 function Marker({ children }) {
   return (

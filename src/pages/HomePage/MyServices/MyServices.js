@@ -1,11 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ServicesImages from "~/assets/images/services/servicesImages";
 import Images from "~/assets/images/Images";
 
 MyServices.propTypes = {};
 
-function MyServices(props) {
+function MyServices({ servicesRef }) {
   const services = [
     Images.services.appDevelopment,
     Images.services.webDesign,
@@ -14,7 +11,7 @@ function MyServices(props) {
   ];
   return (
     <>
-      <div className="row py-3">
+      <div className="row py-3" ref={servicesRef}>
         {services.map((item, index) => (
           <div key={index} className="col-sm-6 col-md-3">
             <div

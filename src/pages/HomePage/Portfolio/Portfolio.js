@@ -1,8 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { portfolio } from "~/utils/portfolio";
-import Masonry from "react-masonry-css";
 import clsx from "clsx";
+import Masonry from "react-masonry-css";
+import { portfolio } from "~/utils/portfolio";
 
 import styles from "./Portfolio.module.scss";
 

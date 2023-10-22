@@ -1,22 +1,22 @@
-import React, { useRef } from "react";
-import PropTypes from "prop-types";
+import { useRef } from "react";
 
-import styles from "./DefaultLayout.module.scss";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 import HomePage from "~/pages/HomePage/HomePage";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 DefaultLayout.propTypes = {};
 
 function DefaultLayout(props) {
   const aboutRef = useRef();
+  const skillRef = useRef();
   const servicesRef = useRef();
   const certificatesRef = useRef();
-  const refList = { aboutRef, servicesRef, certificatesRef };
+  const refList = { aboutRef, skillRef, servicesRef, certificatesRef };
 
   const scrollToTarget = (ref) => {
     if (!ref.current) return;
-    const scrollPosition = ref.current.offsetTop - 120;
+    // ref.current.scrollIntoView();
+    const scrollPosition = ref.current.offsetTop - 80;
     window.scrollTo({ top: scrollPosition, behavior: "smooth" });
   };
   return (

@@ -10,10 +10,9 @@ function SocialNav(props) {
     <>
       <ul className="nav justify-content-left">
         {socialMediaList.map((item, index) => (
-          <li className="nav-item">
+          <li key={index} className="nav-item">
             <a
               className={clsx(styles.navLink)}
-              key={index}
               href={item.url}
               title={item.name}
             >
